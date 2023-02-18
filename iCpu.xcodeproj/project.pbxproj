@@ -11,15 +11,20 @@
 		D045FEC929A13EAC003DBEB3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D045FEC829A13EAC003DBEB3 /* ContentView.swift */; };
 		D045FECB29A13EAC003DBEB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D045FECA29A13EAC003DBEB3 /* Assets.xcassets */; };
 		D045FECE29A13EAC003DBEB3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D045FECD29A13EAC003DBEB3 /* Preview Assets.xcassets */; };
+		D04FE00529A15D6200CB2F05 /* tempsensor.m in Sources */ = {isa = PBXBuildFile; fileRef = D04FE00429A15D6200CB2F05 /* tempsensor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D00561BF29A1444200F2D611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D045FEC329A13EAC003DBEB3 /* iCpu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCpu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D045FEC629A13EAC003DBEB3 /* iCpuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCpuApp.swift; sourceTree = "<group>"; };
 		D045FEC829A13EAC003DBEB3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D045FECA29A13EAC003DBEB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D045FECD29A13EAC003DBEB3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D045FECF29A13EAC003DBEB3 /* iCpu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iCpu.entitlements; sourceTree = "<group>"; };
+		D04FE00329A15D6200CB2F05 /* iCpu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iCpu-Bridging-Header.h"; sourceTree = "<group>"; };
+		D04FE00429A15D6200CB2F05 /* tempsensor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tempsensor.m; sourceTree = "<group>"; };
+		D04FE00629A1674C00CB2F05 /* tempsensor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tempsensor.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +57,15 @@
 		D045FEC529A13EAC003DBEB3 /* iCpu */ = {
 			isa = PBXGroup;
 			children = (
+				D00561BF29A1444200F2D611 /* Info.plist */,
 				D045FEC629A13EAC003DBEB3 /* iCpuApp.swift */,
 				D045FEC829A13EAC003DBEB3 /* ContentView.swift */,
 				D045FECA29A13EAC003DBEB3 /* Assets.xcassets */,
 				D045FECF29A13EAC003DBEB3 /* iCpu.entitlements */,
 				D045FECC29A13EAC003DBEB3 /* Preview Content */,
+				D04FE00429A15D6200CB2F05 /* tempsensor.m */,
+				D04FE00629A1674C00CB2F05 /* tempsensor.h */,
+				D04FE00329A15D6200CB2F05 /* iCpu-Bridging-Header.h */,
 			);
 			path = iCpu;
 			sourceTree = "<group>";
@@ -101,6 +110,7 @@
 				TargetAttributes = {
 					D045FEC229A13EAC003DBEB3 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -141,6 +151,7 @@
 			files = (
 				D045FEC929A13EAC003DBEB3 /* ContentView.swift in Sources */,
 				D045FEC729A13EAC003DBEB3 /* iCpuApp.swift in Sources */,
+				D04FE00529A15D6200CB2F05 /* tempsensor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +208,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -251,6 +263,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -265,6 +278,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = iCpu/iCpu.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -274,15 +289,26 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iCpu/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = iCpu;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexsanteeno.iCpu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "iCpu/iCpu-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -292,6 +318,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = iCpu/iCpu.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -301,15 +329,25 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iCpu/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = iCpu;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexsanteeno.iCpu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "iCpu/iCpu-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
